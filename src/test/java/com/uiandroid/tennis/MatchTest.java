@@ -127,8 +127,7 @@ public class MatchTest {
         Player playerOne = new Player("Dominik");
         Player playerTwo = new Player("Maria");
 
-        //todo create real Match object
-        Match match = null;
+        Match match = MatchImpl.create(playerOne, playerTwo);
 
         GameSequencePlayer gamePlayer = new GameSequencePlayer();
         gamePlayer.play(gameSequence, match);
