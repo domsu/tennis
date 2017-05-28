@@ -119,6 +119,11 @@ public class MatchTest {
                 {tieBreakSequence + "AAAAAABBB" + "A", "1-0, 0-0, 0-0"},
                 {tieBreakSequence + "AAAAAABBBB" + "A", "1-0, 0-0, 0-0"},
                 {tieBreakSequence + "AAAAAABBBBB" + "A", "1-0, 0-0, 0-0"},
+
+                /*
+                    No more points added after finished game
+                 */
+                {tieBreakSequence + "AAAAAAA" + "A", "1-0, 0-0, 0-0"}
         });
     }
 
