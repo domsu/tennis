@@ -11,7 +11,7 @@ public class ScorePrinter {
     }
 
     public String printScore(Score playerOneScore, Score playerTwoScore) {
-        String gamePointsTextScore = getGamePointsTextScore(playerOneScore, playerTwoScore);
+        String gamePointsTextScore = getPointsTextScore(playerOneScore, playerTwoScore);
         return String.format(
                 "%d-%d, %d-%d, %s",
                 playerOneScore.getWonSets(),
@@ -22,7 +22,7 @@ public class ScorePrinter {
         );
     }
 
-    private String getGamePointsTextScore(Score playerOneScore, Score playerTwoScore) {
+    private String getPointsTextScore(Score playerOneScore, Score playerTwoScore) {
         if (gameStateDetector.isAdvantage(playerOneScore, playerTwoScore)) {
             return "Advantage player 1";
         } else if (gameStateDetector.isAdvantage(playerTwoScore, playerOneScore)) {
